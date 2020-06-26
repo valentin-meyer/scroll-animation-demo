@@ -1,0 +1,14 @@
+{# Include this template inside the page.html.twig in drupal. #}
+{% block header %}
+  {% include '@organisms/header/header.twig' with {menu: primary_menu} only%}
+{% endblock header %}
+
+<main class="main-content">
+  {% block main %}
+    <p>Main content</p>
+  {% endblock %}
+</main>
+
+{% block footer %}
+  {% include "@organisms/footer/footer.twig" with {menu: footer_menu} %}
+{% endblock footer %}
