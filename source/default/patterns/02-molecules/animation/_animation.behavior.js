@@ -1,15 +1,29 @@
-import fullpage from "fullPage";
-import lax from 'lax.js'
-
-const updateLax = () => {
-  lax.update(window.scrollY)
-  window.requestAnimationFrame(updateLax)
-}
+import scrollmagic from 'scrollmagic';
+import gsap from 'gsap';
 
 Drupal.behaviors.animation = {
   attach(context) {
-    lax.setup() // init
-    window.requestAnimationFrame(updateLax)
+    var controller = new scrollmagic.Controller();
 
+
+    let tl = gsap.timeline({
+
+    });
+
+
+    new scrollmagic.Scene({
+      duration: 100,
+      offset: 50
+    })
+        .setPin('#scrollmagic')
+        .addTo(controller);
+
+    new scrollmagic.Scene({
+      duration: 100,
+      offset: 150
+    })
+        .setPin('#scrollmagic')
+        .setTween(tl)
+        .addTo(controller);
   },
 };

@@ -77,7 +77,9 @@
   "dependencies": {
     "alpinejs": "^1.10.1",
     "fullPage": "https://github.com/alvarotrigo/fullPage.js.git",
+    "gsap": "^3.3.4",
     "lax.js": "https://github.com/alexfoxy/lax.js.git",
+    "scrollmagic": "https://github.com/janpaepke/ScrollMagic.git",
     "svg4everybody": "^2.1.9",
     "tailwindcss": "^1.4.0"
   },
