@@ -1,9 +1,16 @@
-#scrollmagic-container {
-  height: 3000px;
+.spacer {
+  height: 200px;
 }
 
-#scrollmagic {
-  margin: 300px 0;
-  height: 300px;
-  background: lightblue;
+.demo-text-1-class {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  opacity: 0;
 }
+
+.pin-wrapper {
+  width: 100%;
+  position: relative;
+}
+

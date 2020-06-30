@@ -6,6 +6,12 @@
  */
 #}
 
-<div id="scrollmagic-container">
-  <span id="scrollmagic">Look at me goooooo!</span>
+<div class="pin-container">
+  <div class="pin-wrapper">
+    {% include '@atoms/image/image.twig' with {
+      'img_attributes': 'class="image image-class"',
+      'variant': 'primary',
+      'src': 'images/wave-hero-micro.png'} %}
+    <div class="demo-text-1 demo-text-1-class">Demo text</div>
+  </div>
 </div>
