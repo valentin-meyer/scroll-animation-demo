@@ -25,7 +25,6 @@ vendor
 
 #IDE plugins
 .idea
-.idea/workspace.xml
 
 # Errors
 npm-debug.log
