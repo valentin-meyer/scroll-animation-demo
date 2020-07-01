@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * animation-3
+ *
+ */
+#}
+<div class="spacer"></div>
+<div class="spacer"></div>
+<section class="parallax-section">
+  <div class="parallax-container">
+    <div class="parallax-content">
+      <p>This is a super simple example of how to create a basic parallax effect using GSAP's ScrollTrigger!</p>
+      <p>For more information about ScrollTrigger, check out <a href="https://greensock.com" target="_blank">the GreenSock website.</a></p>
+    </div>
+  </div>
+
+  {% include '@atoms/image/image.twig' with {
+    'img_attributes': 'class="parallax-image"',
+    'variant': 'primary',
+    'src': 'images/elgato-wave-link.jpg'} %}
+</section>

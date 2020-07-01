@@ -24,48 +24,71 @@ Drupal.behaviors.animation = {
       },
     });
 
-    // const tl = gsap.timeline({ yoyo: true });
-    // tl.to('.demo-text-1', { opacity: 1, duration: 1 }, '>1');
-    // tl.to('.demo-text-1', { opacity: 0, duration: 1 });
-    // // tl.to('.demo-text-1', { opacity: 0, duration: 1 });
-    //
-    // scrolltrigger.create({
-    //   animation: tl,
-    //   markers: true,
-    //   trigger: '.demo-text-1',
-    //   start: 'top 20%',
-    //   end: '1000px 20%',
-    //   scrub: true,
-    // });
-
-    gsap.to(".demo-text-1", {
+    gsap.to('.demo-text-1', {
       scrollTrigger: {
-        trigger: ".demo-text-1",
-        start: "20px 200px",
-        end: "500px 50%",
+        trigger: '.demo-text-1',
+        start: '20px 200px',
+        end: '500px 50%',
         scrub: true,
       },
       opacity: 1,
     });
 
-    gsap.set(".demo-text-1", {
+    gsap.set('.demo-text-1', {
       scrollTrigger: {
-        trigger: ".demo-text-1",
-        start: "500px 200px",
-        end: "1000px 50%",
+        trigger: '.demo-text-1',
+        start: '500px 200px',
+        end: '1000px 50%',
         scrub: true,
       },
       opacity: 1,
     });
 
-    gsap.to(".demo-text-1", {
+    gsap.to('.demo-text-1', {
       scrollTrigger: {
-        trigger: ".demo-text-1",
-        start: "1000px 200px",
-        end: "1480px 50%",
+        trigger: '.demo-text-1',
+        start: '1000px 200px',
+        end: '1480px 50%',
         scrub: true,
       },
       opacity: 0,
     });
+
+    gsap.to('.parallax-content', {
+      yPercent: -100,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.parallax-section',
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    gsap.to('.parallax-image', {
+      yPercent: 50,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.parallax-section',
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    const tl = gsap.timeline({ yoyo: true });
+    tl.to('.demo-text-1', { opacity: 1, duration: 1 }, '>1');
+    tl.to('.demo-text-1', { opacity: 0, duration: 1 });
+    // tl.to('.demo-text-1', { opacity: 0, duration: 1 });
+
+    scrolltrigger.create({
+      animation: tl,
+      markers: true,
+      trigger: '.demo-text-1',
+      start: 'top 20%',
+      end: '1000px 20%',
+      scrub: true,
+    });
+
   },
 };
