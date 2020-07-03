@@ -76,18 +76,56 @@ Drupal.behaviors.animation = {
       },
     });
 
-    const tl = gsap.timeline({ yoyo: true });
-    tl.to('.demo-text-1', { opacity: 1, duration: 1 }, '>1');
-    tl.to('.demo-text-1', { opacity: 0, duration: 1 });
-    // tl.to('.demo-text-1', { opacity: 0, duration: 1 });
+    // Parallax 2
 
-    scrolltrigger.create({
-      animation: tl,
-      markers: true,
-      trigger: '.demo-text-1',
-      start: 'top 20%',
-      end: '1000px 20%',
-      scrub: true,
+    gsap.to('.headline-container', {
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.headline-container',
+        start: 'top center', // the default values
+        end: 'top top',
+        scrub: true,
+        pin: true,
+        pinSpacing: false,
+      },
+    });
+
+    gsap.to('.parallax-image22', {
+      ease: 'none',
+      opacity: 1,
+      scrollTrigger: {
+        trigger: '.parallax-image22',
+        start: 'top center', // the default values
+        end: 'bottom top',
+        scrub: true,
+        pin: true,
+        pinSpacing: false,
+      },
+    });
+
+    gsap.to('.parallax-image22', {
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.parallax-image22',
+        start: 'center center', // the default values
+        end: '+=3000',
+        markers: true,
+        scrub: true,
+        pin: true,
+      },
+    });
+
+    gsap.to('.parallax-image2', {
+      ease: 'none',
+      yPercent: -100,
+      scrollTrigger: {
+        trigger: '.parallax-image22',
+        start: 'top center', // the default values
+        end: 'bottom top',
+        scrub: true,
+        pin: true,
+        pinSpacing: false,
+      },
     });
 
   },

@@ -48,14 +48,16 @@
 /*parallax2*/
 
 .parallax-image2 {
-  width: 100%;
+  z-index: 3;
   background-color: white;
-  margin-bottom: 40px;
+  position: absolute;
 }
 
 .parallax-image22 {
+  opacity: 0;
   width: 100%;
   position: absolute;
+  bottom: 0;
 }
 
 .headline {
@@ -67,10 +69,16 @@
   font-size: 30px;
 }
 
-.parallax-section2 {
-  position: relative;
-}
-
 .headline-container {
   position: absolute;
+  bottom: 100px;
+  z-index: 2;
+}
+
+.image-background {
+  visibility: hidden;
+}
+
+.parallax-container2 {
+  position: relative;
 }
